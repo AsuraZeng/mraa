@@ -133,7 +133,7 @@ mraa_aio_init(unsigned int aio)
     }
 
     raw_bits = mraa_adc_raw_bits();
-    mraa_aio_set_bit(dev, DEFAULT_BITS);
+    mraa_aio_set_bit(dev, raw_bits);
 
     if (IS_FUNC_DEFINED(dev, aio_init_pre)) {
         mraa_result_t pre_ret = (dev->advance_func->aio_init_pre(aio));
